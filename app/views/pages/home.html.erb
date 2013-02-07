@@ -1,12 +1,15 @@
-<div class="hero-unit" align=center>
-  <h1>Welcome to Flag Exchange</h1>
-  <p>Why lose 40% when you sell your equipment?</p>
-  <p>
-		<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
-		<%= link_to "Learn More", about_path, class: "btn" %>
-  </p>
-</div>
-
-<p>
-	<%= link_to "Sign Up Now!", "#"%>
-</p>
+<% if user_signed_in? %>
+	<div class="hero-unit" align=center>
+	  <h1>Welcome back to Flag Exchange</h1>
+	  <p>You're all signed in and ready to go!</p>
+	</div>
+<% else %>
+	<div class="hero-unit" align=center>
+	  <h1>Welcome to Flag Exchange</h1>
+	  <p>Why lose 40% when you sell your equipment?</p>
+	  <p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
+			<%= link_to "Learn More", about_path, class: "btn" %>
+	  </p>
+	</div>
+<% end %>
