@@ -120,6 +120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   bootstrap-sass (~> 2.2.2.0)
   coffee-rails (~> 3.2.1)
   country_select
